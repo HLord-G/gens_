@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="q.js"></script>
+
+ 
+</head>
+<body>
+
+
+    <button id="sss">view</button>
+    <button id="btnsample" style="display:none;">SAmples</button>
+    
+    <img src="" sdd alt="">
+
+    <script>
+        $(document).on("click", "#btnsample", function(){
+            alert("Hello World");
+        });
+
+
+        $(document).on("click", "#sss", function(){
+            $("#btnsample").show();
+        });
+
+    
+
+    </script>
+
+<img sdd />
+
+<script>
+async function loadImage() {
+  const el = document.querySelector("[sdd]");
+
+  const base64 = await imgGen(
+    "@Jarolddd",
+    "https://64.media.tumblr.com/76574cf347b1b15ed2ba1f3fc09e6ab7/8893d9631342bcee-f8/s512x512u_c1/d369d5b3b41bdc3831bbf6c8a7c7af343aef8484.jpg",
+    "dsfeee"
+  );
+
+  if (base64) {
+    el.src = base64;
+  } else {
+    console.warn("Image generation failed");
+  }
+}
+
+loadImage();
+
+function imgGen(username, img, userx) {
+  return new Promise((resolve) => {
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const bg = new Image();
+    bg.crossOrigin = "anonymous";
+    bg.src = "l.jpg";
+
+    bg.onload = () => {
+
+      // =========================
+      // ✅ AUTO CANVAS SIZE (BASED SA BG RATIO)
+      // =========================
+      const baseWidth = 832;
+      const ratio = bg.width / bg.height;
+
+      canvas.width = baseWidth;
+      canvas.height = baseWidth / ratio;
+
+      // =========================
+      // ✅ DRAW BG (NO STRETCH, CENTER)
+      // =========================
+      const scale = Math.min(canvas.width / bg.width, canvas.height / bg.height);
+
+      const drawWidth = bg.width * scale;
+      const drawHeight = bg.height * scale;
+
+      const offsetX = (canvas.width - drawWidth) / 2;
+      const offsetY = (canvas.height - drawHeight) / 2;
+
+      ctx.drawImage(bg, offsetX, offsetY, drawWidth, drawHeight);
+
+      // =========================
+      // 🧠 SCALE FACTOR (para dili maguba imong layout)
+      // =========================
+      const scaleX = canvas.width / 932;
+      const scaleY = canvas.height / 2230;
+
+      // =========================
+      // AVATAR
+      // =========================
+      const avatar = new Image();
+      avatar.crossOrigin = "anonymous";
+      avatar.src = img;
+
+      avatar.onload = () => {
+
+        const x = 390 * scaleX;
+        const y = 360 * scaleY;
+        const size = 150 * scaleX;
+
+        ctx.drawImage(avatar, x, y, size, size);
+
+        // =========================
+        // TEXTS
+        // =========================
+        ctx.fillStyle = "white";
+        ctx.font = `${40 * scaleX}px Segoe UI`;
+        ctx.textAlign = "center";
+        ctx.fillText(username, canvas.width / 2, 664 * scaleY);
+
+        ctx.fillStyle = "#5668ec";
+        ctx.font = `bold ${50* scaleX}px Segoe UI`;
+        ctx.textAlign = "center";
+        ctx.fillText("userfdddee", 380 * scaleX, 1999 * scaleY);
+
+ 
+
+        resolve(canvas.toDataURL("image/jpeg", 0.8));
+      };
+
+      avatar.onerror = () => {
+        console.warn("⚠️ Avatar failed");
+
+        ctx.fillStyle = "#222";
+        ctx.fillRect(390 * scaleX, 360 * scaleY, 51 * scaleX, 51 * scaleY);
+
+        ctx.fillStyle = "#57b2e0";
+        ctx.font = `bold ${40 * scaleX}px Segoe UI`;
+        ctx.textAlign = "center";
+        ctx.fillText(username, canvas.width / 2, 750 * scaleY);
+
+        resolve(canvas.toDataURL("image/jpeg", 0.8));
+      };
+    };
+
+    bg.onerror = () => {
+      console.error("❌ BG failed");
+      resolve(null);
+    };
+
+  });
+}
+
+
+
+</script>
+</body>
+</html>
