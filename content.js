@@ -5,16 +5,16 @@ function injectUI() {
     let bodyholder = document.querySelector("body");
 
     bodyholder.insertAdjacentHTML("beforeend", `
-        <div style="z-index:9999; position:fixed; bottom:10%; left:5%; color:red;">
+        <div style="z-index:9999; position:fixed; bottom:2%; right:2%; color:red;">
 
             <textarea style="height:90px; width:220px; font-size: 10px;" usergen></textarea><br>
             <input class="" type="text" style="width:220px; font-size: 10px;" emailget placeholder="feee"><br>
             
             <div style="display:flex; flex-flow:row; width:223px;">
                 <button style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" genemail> Create </button>
-                <button style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" genusername> Gen Username </button>
-                <button style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" repot> repot </button>
-                <button style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" lagout> lagout </button>
+                <button hidden style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" genusername> Gen Username </button>
+                <button hidden style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" repot> repot </button>
+                <button hidden style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" lagout> lagout </button>
             </div>
             
         </div>
@@ -188,7 +188,7 @@ function hinderClicker_oncer(html, delay = 5000) {
                     clearInterval(checker);
 
                     setTimeout(() => {
-
+                     alert("eh Verify sa ang email haya eh click okay!")
                      run_chnageUsername() 
 
                         resolve(target);
@@ -882,7 +882,7 @@ async function run() {
 
 
 setTimeout(() => {
-    hinderClicker_oncer(`<button class="qf5_7 xmQVN zWFEr jBvzu gx0cT" aria-label="Dismiss" type="button"><span class="aKdEe"><svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg"><use href="#managed-icon__ds-ui-x-16"></use></svg></span></button>`,5000)
+    hinderClicker_oncer(`<button class="qf5_7 xmQVN zWFEr jBvzu gx0cT" aria-label="Dismiss" type="button"><span class="aKdEe"><svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg"><use href="#managed-icon__ds-ui-x-16"></use></svg></span></button>`,1000)
 }, 1000);
 
 
