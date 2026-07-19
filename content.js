@@ -7,10 +7,10 @@ function injectUI() {
     bodyholder.insertAdjacentHTML("beforeend", `
         <div style="z-index:9999; position:fixed; bottom:2%; right:2%; color:red;">
 
-            <textarea style="height:90px; width:220px; font-size: 10px;" usergen></textarea><br>
+            <textarea style="height:90px; width:220px; font-size: 10px;"  usergen></textarea><br>
             <input class="" type="text" style="width:220px; font-size: 10px;" emailget placeholder="feee"><br>
             
-            <div style="display:flex; flex-flow:row; width:223px;">
+            <div style="display:flex; flex-flow:row; width:223px;"> 
                 <button style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" genemail> Create </button>
                 <button hidden style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" genusername> Gen Username </button>
                 <button hidden style="padding:5px 7px; font-size: 10px; flex:1; border:1px solid red;" repot> repot </button>
@@ -805,74 +805,130 @@ async function run() {
     let passWord_ =ranID(13);
     const birth = getAdultBirthday(20, 40);
 
+ 
 
+    try {
+        await hinderClicker(
+            `<button class="qf5_7 FvWC2 u1icf CZAN9 xhHhD ov51I" aria-label="Sign up" type="button"><span class="aKdEe">Sign up</span></button>`,
+            1
+        );
+    } catch (error) {
+      console.log("error_1")  
+    }
 
-    await hinderClicker(
-    `<button class="qf5_7 FvWC2 u1icf CZAN9 xhHhD GqZGX" aria-label="Sign up" type="button"><span class="aKdEe">Sign up</span></button>`,
-    1
-    );
-
-    await hinderClicker(
-    `<button aria-label="Continue with email" class="dKGjO"><svg height="24" role="presentation" width="23" xmlns="http://www.w3.org/2000/svg"><use href="#managed-icon__mail"></use></svg>Continue with email</button>`,
-    1
-    );
-
-    await hinderInput(
-    `<input aria-label="email" autocomplete="username" class="sL4Tf" name="email" placeholder="Email" type="email" value="">`,
-    `${email_input}`,
+    try {
+        await hinderClicker(
+        `<button aria-label="Continue with email" class="dKGjO"><svg height="24" role="presentation" width="23" xmlns="http://www.w3.org/2000/svg"><use href="#managed-icon__mail"></use></svg>Continue with email</button>`,
         1
-    );
+        );
+    } catch (error) {
+      console.log("error_2")  
+    }
 
-    await hinderClicker(
-    `<button class="TRX6J CxLjL qjTo7 CguuB qNKBC" aria-label="Next" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
-    300
-    );
+    try {
+        await hinderInput(
+        `<input aria-label="email" autocomplete="username" class="sL4Tf" name="email" placeholder="Email" type="email" value="">`,
+        `${email_input}`,
+            1
+        );
+    } catch (error) {
+        console.log("error_3")  
+    }
 
-    await hinderInput(
-    `<input autocomplete="new-password" class="sL4Tf" placeholder="Set a password" type="password" value="" autofocus="">`,
-    `${passWord_}`,
+ 
+    try {
+            await hinderClicker(
+        `<button class="TRX6J CxLjL NcgqJ CguuB qNKBC" aria-label="Next" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
         300
-    );
+        );
 
-    await hinderInput(
+    } catch (error) {
+        console.log("error_4")    
+    }
+
+    try {
+            await hinderInput(
+            `<input autocomplete="new-password" class="sL4Tf" placeholder="Set a password" type="password" value="" autofocus="">`,
+            `${passWord_}`,
+                300
+            );
+    } catch (error) {
+        console.log("error_5")    
+    }
+
+        try {
+             await hinderInput(
     `<input autocomplete="new-password" class="sL4Tf" placeholder="Repeat password" type="password" value="">`,
     `${passWord_}`,
         400
-    );
+    );   
+        } catch (error) {
+            console.log("error_6")      
+        }
 
-    await hinderClicker(
-    `<button class="TRX6J CxLjL qjTo7 CguuB qNKBC" aria-label="Next" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
-    2000
-    );
+    try {
+            await hinderClicker(
+            `<button class="TRX6J CxLjL NcgqJ CguuB qNKBC" aria-label="Next" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
+            2000
+            );
+    } catch (error) {
+                 console.log("error_7")       
+    }
 
-    await textTransfer(email_input, passWord_);
+    try {
+        await textTransfer(email_input, passWord_);
+    } catch (error) {
+                 console.log("error_8")       
+    }
 
-    await hinderBirthday(
+    try {
+        await hinderBirthday(
         birth.month,
         birth.day,
         birth.year,
         200
     );
 
-    await hinderClicker(
-    `<button class="TRX6J CxLjL qjTo7 CguuB qNKBC" aria-label="Next" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
-    300
-    );
+    } catch (error) {
+                    console.log("error_9")   
+    }
+
+    try {
+            await hinderClicker(
+            `<button class="TRX6J CxLjL NcgqJ CguuB qNKBC" aria-label="Next" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
+            300
+            );
+    } catch (error) {
+                    console.log("error_9")   
+    }
 
 
-    await hinderInput(
+    try {
+            await hinderInput(
     `<input aria-describedby="blognameDescription" autocomplete="off" class="f1zZG" id="onboardingBlogname" maxlength="32" name="blogName" placeholder="Blog name" type="text" value="">`,
      ` `,
     300
     );
+    } catch (error) {
+                    console.log("error_10")   
+    }
 
-    await randomSelectuser(200);
+    try {
+            await randomSelectuser(200);
+    } catch (error) {
+                    console.log("error_11")   
+    }
 
 
-    await hinderClicker(
-    `<button class="TRX6J CxLjL qjTo7 CguuB qNKBC" aria-label="Sign up" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Sign up<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
-    300
-    );
+
+    try {
+            await hinderClicker(
+            `<button class="TRX6J CxLjL NcgqJ CguuB qNKBC" aria-label="Sign up" type="submit" style="--button-text: var(--image-ui-fg); --button-bg: var(--image-ui); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Sign up<svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: var(--image-ui-fg); transform: rotate(180deg); transform-origin: center center;"><use href="#managed-icon__arrow"></use></svg></span></button>`,
+            300
+            );
+    } catch (error) {
+                    console.log("error_12")  
+    }
 
  
 
@@ -895,7 +951,7 @@ async function runFollow() {
 
 
     await hinderClicker(
-    `<button class="TRX6J CxLjL qjTo7 CguuB qNKBC" style="--button-text: RGB(var(--black)); --button-bg: RGB(var(--white)); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next</span></button>`,
+    `<button class="TRX6J CxLjL NcgqJ CguuB qNKBC" style="--button-text: RGB(var(--black)); --button-bg: RGB(var(--white)); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Next</span></button>`,
     300
     );
 
@@ -976,61 +1032,123 @@ function click_gen(){
 
  async function run_chnageUsername() {
  
-    await hinderClicker(
+    try {
+        await hinderClicker(
         `<button class="qf5_7 xmQVN zWFEr jBvzu gx0cT" aria-label="Dismiss" type="button"><span class="aKdEe"><svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg"><use href="#managed-icon__ds-ui-x-16"></use></svg></span></button>`,
         30
     );
+    } catch (error) {
+        console.log("usenames_error_1")
+    }
  
-    await accountTrigger();
-    await userAccountTrigger(300);
-    await blogSettingsTrigger();
-    await hinderClicker(
-        `<button class="TRX6J CxLjL qjTo7 IMvK3 v8miJ" style="--button-text: #000000; --button-bg: #ffffff; border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Edit appearance</span></button>`,
+    try {
+        await accountTrigger();
+    } catch (error) {
+        console.log("usenames_error_2")
+    }
+
+
+    try {
+        await userAccountTrigger(300);
+    } catch (error) {
+        console.log("usenames_error_3")
+    }
+
+
+    try {
+        await blogSettingsTrigger();
+    } catch (error) {
+        console.log("usenames_error_4")
+    }
+
+    
+    try {
+        await hinderClicker(
+        `<button class="TRX6J CxLjL NcgqJ IMvK3 v8miJ" style="--button-text: #000000; --button-bg: #ffffff; border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1">Edit appearance</span></button>`,
         30
     );
+    } catch (error) {
+          console.log("usenames_error_5")
+    }
 
-    usernameselection(`<input aria-label="Blog title" class="c1JQY qC1o8 qZTLo" placeholder="Title" spellcheck="false" tabindex="0" forwardedref="[object Object]" value="Untitled" style="font-family: Gibson, sans-serif; color: rgb(0, 0, 0); font-weight: bold; text-decoration-color: rgb(0, 184, 255);">`, 
+    try {
+        usernameselection(`<input aria-label="Blog title" class="c1JQY qC1o8 qZTLo" placeholder="Title" spellcheck="false" tabindex="0" forwardedref="[object Object]" value="Untitled" style="font-family: Gibson, sans-serif; color: rgb(0, 0, 0); font-weight: bold; text-decoration-color: rgb(0, 184, 255);">`, 
         `${userGen}`, 
         200);
+    } catch (error) {
+        console.log("usenames_error_6")
+    }
 
-    await hinderClicker(
+    try {
+        await hinderClicker(
         `<button aria-label="Edit blog avatar image" class="uEsQE" tabindex="0" forwardedref="[object Object]"><svg height="16" role="presentation" width="16" xmlns="http://www.w3.org/2000/svg"><use href="#managed-icon__post"></use></svg></button>`,
         30
     );
+    } catch (error) {
+         console.log("usenames_error_7")
+    }
  
 
-    await hinderRandomImage();
+    try {
+        await hinderRandomImage();
+    } catch (error) {
+         console.log("usenames_error_8")
+    }
     
-    await hinderClicker(
-        `<button class="TRX6J CxLjL qjTo7 IMvK3 MyRtW" style="--button-text: rgba(var(--black), 0.80); --button-bg: RGB(var(--white)); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1" style="width: fit-content;">Save</span></button>`,
+   try {
+     await hinderClicker(
+        `<button class="TRX6J CxLjL NcgqJ IMvK3 MyRtW" style="--button-text: rgba(var(--black), 0.80); --button-bg: RGB(var(--white)); border-color: rgba(var(--black), 0.40);"><span class="EvhBA" tabindex="-1" style="width: fit-content;">Save</span></button>`,
         30
     );
+   } catch (error) {
+     console.log("usenames_error_9")
+   }
     
-    await hinderInput(
+    try {
+        await hinderInput(
         `<input aria-label="Search" autocapitalize="on" autocomplete="off" class="j8Eiw Qqfho" name="q" placeholder="Search Tumblr" type="text" value="">`,
         "#anime",
         3000
     );
+    } catch (error) {
+        console.log("usenames_error_10")   
+    }
 
 
 
-    await hinderClicker(
+   try {
+     await hinderClicker(
         `<a class="pBLQq J1Yq3 QxY_t" href="/search/%23anime?src=typed_query"><svg class="Rzekl" height="24" role="presentation" width="24" xmlns="http://www.w3.org/2000/svg" style="--icon-color-primary: rgba(var(--black), 0.60);"><use href="#managed-icon__search-round"></use></svg><span class="L29Yf">search for </span><span class="Eguk6">#anime</span></a>`,
         20
     );
+   } catch (error) {
+     console.log("usenames_error_11") 
+   }
 
-    await hinderClicker(
+   try {
+     await hinderClicker(
         `<button class="TRX6J wl0Ka" aria-label="Top"><span class="EvhBA OPOal" tabindex="-1">Top</span></button>`,
         30
     );
+   } catch (error) {
+     console.log("usenames_error_12")
+   }
 
 
-    await clickEventsss(0, 200);
+    try {
+        await clickEventsss(0, 200);
+    } catch (error) {
+        console.log("usenames_error_13")
+    }
 
-    await hinderClicker(
+   try {
+     await hinderClicker(
             `<div role="menuitem" class="f4BvS" id=":tumblrr4o:" tabindex="-1" data-active-item="true" data-tabindex="0"><span class="KFKnW"><div aria-hidden="true" class="ifcVH"><svg height="24" role="presentation" width="24" xmlns="http://www.w3.org/2000/svg"><use href="#managed-icon__ds-reblog-24"></use></svg></div><span class="xg1mq">Reblog now</span></span><div aria-label="(Shortcut: SHIFT + R)" class="xCGeu">SHIFT + R</div></div>`,
             30
         );
+   } catch (error) {
+    console.log("usenames_error_14")
+   }
  
  } 
 

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "regs",
-    "version": "7.0",
+    "version": "8.0",
     "description": "Simple Chrome extension with content script",
     "author": "Lordskey",
   
@@ -18,9 +18,7 @@
     {
       "resources": ["usernames.json","user_images/*"],
       "matches": [
-        "https://www.tumblr.com/*",
-        "http://localhost/*",
-        "http://127.0.0.1/*"
+        "https://www.tumblr.com/*" 
       ]
     }
   ],
@@ -36,9 +34,7 @@
     "content_scripts": [
       {
         "matches": [
-          "https://www.tumblr.com/*",
-          "http://localhost/*",
-          "http://127.0.0.1/*"
+          "https://www.tumblr.com/*"
         ],
         "js":   ["/assets/libs/q.js","content.js"],
         "css":  ["/assets/owl_style.css"],
